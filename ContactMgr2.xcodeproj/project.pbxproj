@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0C026ECD194AA38600D33920 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C026ECC194AA38600D33920 /* libsqlite3.dylib */; };
 		0C026ED0194AA43A00D33920 /* ContactSvcSQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C026ECF194AA43A00D33920 /* ContactSvcSQLite.m */; };
+		0C47D2E41955104A000E3C0A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C47D2E31955104A000E3C0A /* CoreData.framework */; };
+		0C47D2E7195510A1000E3C0A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C47D2E5195510A1000E3C0A /* Model.xcdatamodeld */; };
+		0C47D2EA1955113E000E3C0A /* ContactSvcCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C47D2E91955113E000E3C0A /* ContactSvcCoreData.m */; };
 		0C701455192B10A8007E32BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C701454192B10A8007E32BC /* Foundation.framework */; };
 		0C701457192B10A8007E32BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C701456192B10A8007E32BC /* CoreGraphics.framework */; };
 		0C701459192B10A8007E32BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C701458192B10A8007E32BC /* UIKit.framework */; };
@@ -43,6 +46,10 @@
 		0C026ECC194AA38600D33920 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		0C026ECE194AA43A00D33920 /* ContactSvcSQLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactSvcSQLite.h; path = ../ContactSvcSQLite.h; sourceTree = "<group>"; };
 		0C026ECF194AA43A00D33920 /* ContactSvcSQLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactSvcSQLite.m; path = ../ContactSvcSQLite.m; sourceTree = "<group>"; };
+		0C47D2E31955104A000E3C0A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0C47D2E6195510A1000E3C0A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		0C47D2E81955113E000E3C0A /* ContactSvcCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactSvcCoreData.h; sourceTree = "<group>"; };
+		0C47D2E91955113E000E3C0A /* ContactSvcCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactSvcCoreData.m; sourceTree = "<group>"; };
 		0C701451192B10A8007E32BC /* ContactMgr2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactMgr2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C701454192B10A8007E32BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0C701456192B10A8007E32BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -77,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C47D2E41955104A000E3C0A /* CoreData.framework in Frameworks */,
 				0C026ECD194AA38600D33920 /* libsqlite3.dylib in Frameworks */,
 				0C701457192B10A8007E32BC /* CoreGraphics.framework in Frameworks */,
 				0C701459192B10A8007E32BC /* UIKit.framework in Frameworks */,
@@ -119,6 +127,7 @@
 		0C701453192B10A8007E32BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C47D2E31955104A000E3C0A /* CoreData.framework */,
 				0C026ECC194AA38600D33920 /* libsqlite3.dylib */,
 				0C701454192B10A8007E32BC /* Foundation.framework */,
 				0C701456192B10A8007E32BC /* CoreGraphics.framework */,
@@ -150,6 +159,7 @@
 				0C70145D192B10A8007E32BC /* InfoPlist.strings */,
 				0C701460192B10A8007E32BC /* main.m */,
 				0C701462192B10A8007E32BC /* ContactMgr2-Prefix.pch */,
+				0C47D2E5195510A1000E3C0A /* Model.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -176,6 +186,8 @@
 		0CF8D012192B122C00B08E15 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0C47D2E81955113E000E3C0A /* ContactSvcCoreData.h */,
+				0C47D2E91955113E000E3C0A /* ContactSvcCoreData.m */,
 				0C026ECE194AA43A00D33920 /* ContactSvcSQLite.h */,
 				0C026ECF194AA43A00D33920 /* ContactSvcSQLite.m */,
 				0CF8D013192B126200B08E15 /* Contact.h */,
@@ -289,6 +301,8 @@
 				0C026ED0194AA43A00D33920 /* ContactSvcSQLite.m in Sources */,
 				0CF8D019192B144200B08E15 /* ContactSvcCache.m in Sources */,
 				0CF8D015192B126200B08E15 /* Contact.m in Sources */,
+				0C47D2E7195510A1000E3C0A /* Model.xcdatamodeld in Sources */,
+				0C47D2EA1955113E000E3C0A /* ContactSvcCoreData.m in Sources */,
 				0CA70AF919414FE100B12E63 /* ContactSvcArchive.m in Sources */,
 				0C70146B192B10A8007E32BC /* ViewController.m in Sources */,
 				0C701465192B10A8007E32BC /* AppDelegate.m in Sources */,
@@ -508,6 +522,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0C47D2E5195510A1000E3C0A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0C47D2E6195510A1000E3C0A /* Model.xcdatamodel */,
+			);
+			currentVersion = 0C47D2E6195510A1000E3C0A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0C701449192B10A8007E32BC /* Project object */;
 }
