@@ -11,7 +11,8 @@
 #import "Contact.h"
 //#import "ContactSvcCache.h"
 //#import "ContactSvcArchive.h"
-#import "ContactSvcSQLite.h"
+//#import "ContactSvcSQLite.h"
+#import "ContactSvcCoreData.h"
 
 @interface ViewController ()
 
@@ -21,7 +22,8 @@
 
 //ContactSvcCache * contactSvc = nil;
 //ContactSvcArchive * contactSvc = nil;
-ContactSvcSQLite *contactSvc = nil;
+//ContactSvcSQLite *contactSvc = nil;
+ContactSvcCoreData *contactSvc = nil;
 
 
 - (void)viewDidLoad
@@ -29,7 +31,8 @@ ContactSvcSQLite *contactSvc = nil;
     [super viewDidLoad];
 	//contactSvc = [[ContactSvcCache alloc] init];
     //contactSvc = [[ContactSvcArchive alloc] init];
-    contactSvc = [[ContactSvcSQLite alloc] init];
+    //contactSvc = [[ContactSvcSQLite alloc] init];
+    contactSvc = [[ContactSvcCoreData alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
