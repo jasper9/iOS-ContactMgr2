@@ -26,6 +26,8 @@
 ContactSvcCoreData *contactSvc = nil;
 
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -46,14 +48,23 @@ ContactSvcCoreData *contactSvc = nil;
     
     [self.view endEditing:YES];
     
-    Contact *contact = [[Contact alloc] init];
+    NSLog(@"saveContact: 1");
+    //Contact *contact = [[Contact alloc] init];
+    //Contact *contact = [NSEntityDescription insertNewObjectForEntityForName:@"Contact" inManagedObjectContext:moc];
+    Contact *contact = [contactSvc createManagedContact];
+    NSLog(@"saveContact: 2");
     contact.name = _name.text;
+    NSLog(@"saveContact: 3");
     contact.phone = _phone.text;
+    NSLog(@"saveContact: 4");
     contact.email = _email.text;
+    NSLog(@"saveContact: 5");
+    
+    
     
     NSLog(@"saveContact: Creating %@" , contact.name);
     
-    [contactSvc createContact:contact];
+    //[contactSvc createContact:contact];
     
     [self.tableView reloadData];
     NSLog(@"saveContact: contact saved");
@@ -88,8 +99,8 @@ ContactSvcCoreData *contactSvc = nil;
     //JKG mistake in example code here
     //cell.textLabel.text = contact.name;
     cell.textLabel.font = [UIFont systemFontOfSize:22];
-    cell.textLabel.text = contact.description;
-    
+    //cell.textLabel.text = contact.description;
+    cell.textLabel.text = contact.name;
     return cell;
 }
 

@@ -13,8 +13,9 @@
 @protocol ContactSvc <NSObject>
 
 - (Contact *) createContact: (Contact *) contact;
-- (NSMutableArray *) retrieveAllContacts;
+- (NSArray *) retrieveAllContacts;
 - (Contact *) updateContact: (Contact *) contact;
 - (Contact *) deleteContact: (Contact *) contact;
+- (Contact *) createManagedContact;
 
 @end
